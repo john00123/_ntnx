@@ -162,6 +162,15 @@
 	transition: $a 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+//hover
+@mixin hover($c:inherit, $b:none){
+	&:hover{
+		cursor: pointer;
+		color: $c;
+		background-color: $b;
+	}
+}
+
 //arrow
 @mixin arrow ($h:6px, $w:1.5px){
 	position: relative;
