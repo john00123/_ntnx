@@ -26,6 +26,12 @@
 	justify-content: $j;
 	flex-direction: $d;
 }
+@mixin absolute($t:0, $l:0, $r:''){
+	position:absolute;
+	top:$t;
+	left:$l;
+	right:$r;
+}
 
 //button style
 @mixin primary {
