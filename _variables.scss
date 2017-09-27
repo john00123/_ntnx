@@ -83,8 +83,8 @@ $h2:       400 18px/12px 'nutanix_soft', san-serif;
 $h3:       500 14px/10px 'nutanix_soft', san-serif;
 $h3-alt:   400 14px/10px 'nutanix_soft', san-serif;
 $h4:       400 12px/8px  'nutanix_soft', san-serif;
-$p:        300 14px/22px 'nutanix_soft', san-serif;
-$p-alt:    300 14px/10px 'nutanix_soft', san-serif;
+$p:        400 14px/22px 'nutanix_soft', san-serif;
+$p-alt:    400 14px/10px 'nutanix_soft', san-serif;
 $a:        400 14px/10px 'nutanix_soft', san-serif;
 
 //sizes
@@ -92,3 +92,6 @@ $extra-small:  7px;
 $small:        10px;
 $medium:       20px;
 $large:        30px;
+
+//animation
+$animation: cubic-bezier(0.165, 0.84, 0.44, 1);

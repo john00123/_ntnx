@@ -17,15 +17,18 @@
 	width: $w;
 	box-sizing: border-box;
 }
+
 @mixin padding($t:20px, $s:20px){
 	padding: $t $s;
 }
+
 @mixin flex($a, $j, $d) {
 	display: flex;
 	align-items: $a;
 	justify-content: $j;
 	flex-direction: $d;
 }
+
 @mixin absolute($t:0, $l:0, $r:''){
 	position:absolute;
 	top:$t;
@@ -64,7 +67,7 @@
 }
 
 @mixin secondary {
-	border: 1px solid $border-color-1;
+	border: 1px solid $border-color-2;
 	border-radius: 4px;
 	padding: 11px 15px;
 	color: $font-color-1;
@@ -280,4 +283,50 @@
 		color: $font-color-1-old;
 		cursor: pointer;
 	}
+}
+
+
+@mixin primary-old{
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 11px 15px;
+	color: $white;
+	font: $a-old;
+	text-decoration: none;
+	background-color: $blue-2-old;
+
+	&:hover {
+		background-color: $blue-3-old;
+		cursor: pointer;
+	}
+}
+
+
+//popup
+@mixin inputs{
+	input{
+		@include size(32px, 100%);
+    border-radius: 4px;
+    border: 1px solid $border-color-1;
+    padding: 11px 10px;
+    color:$font-color-1;
+    font:$p-alt;
+    position: relative;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    &:focus{
+       outline: none;
+       border-color:$blue-1;
+    }
+  }
+
+  label{
+    font:$h4;
+    text-align: left;
+    width: 100%;
+    font-weight: 500;
+    color: $font-color-2;
+    margin-bottom: 10px;
+  }
 }
