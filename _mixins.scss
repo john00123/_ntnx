@@ -304,7 +304,7 @@
 
 //popup
 @mixin inputs{
-	input{
+	input:not([type=checkbox]):not([type=radio]):not([type=file]){
 		@include size(32px, 100%);
     border-radius: 4px;
     border: 1px solid $border-color-1;
@@ -312,13 +312,19 @@
     color:$font-color-1;
     font:$p-alt;
     position: relative;
-    &:not(:last-child){
+  	&:not(:last-child){
       margin-bottom: 20px;
     }
     &:focus{
        outline: none;
        border-color:$blue-1;
     }
+		&::-webkit-input-placeholder {
+			padding-top: 4px;
+			vertical-align: middle;
+			color:$light-grey-2;
+		}
+
   }
 
   label{
