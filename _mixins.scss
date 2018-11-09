@@ -36,6 +36,12 @@
 	right:$r;
 }
 
+@mixin grid($min, $max, $gap){
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($min, $max));
+	grid-gap: $gap;
+}
+
 //button style
 @mixin primary {
 	margin:0;
