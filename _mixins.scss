@@ -310,7 +310,7 @@
 
 //popup
 @mixin inputStyle{
-	input:not([type=checkbox]):not([type=radio]):not([type=file]){
+	input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=submit]):not([type=reset]), select {
 		@include size(32px, 100%);
     border-radius: 4px;
     border: 1px solid $border-color-1;
@@ -341,4 +341,67 @@
     color: $font-color-2;
     margin-bottom: 10px;
   }
+
+	input[type=submit], [data-type='primary'] {
+  	margin: 0;
+	  border-radius: 4px;
+	  padding: 11px 15px;
+	  color: #FFFFFF;
+	  font: 500 14px/10px "nutanix_soft", san-serif;
+	  border: none;
+	  text-decoration: none;
+	  background-color: #22A5F7;
+	  outline: none;
+		&:hover{
+			color: #FFFFFF;
+			cursor: pointer;
+			background-color: #1f88de;
+		}
+	}
 }
+
+
+// input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=submit]):not([type=reset]):disabled, select:disabled {
+//   background-color: #F2F4F6;
+
+//
+// input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=submit]):not([type=reset]):focus
+//
+// label,
+// legend {
+//   text-align: left;
+//   width: 100%;
+// }
+//
+// input[type=submit]:active, [data-type='primary']:active {
+//   color: #FFFFFF;
+//   background-color: #1b6dc6;
+// }
+//
+// input[type=submit] span, [data-type='primary'] span {
+//   height: 10px;
+//   display: block;
+//   font-weight: 500;
+//   line-height: 9pt;
+// }
+//
+// input[type=reset], [data-type='secondary'] {
+//   background-color: #FFFFFF;
+//   border: 1px solid #D5DAE0;
+//   border-radius: 4px;
+//   padding: 11px 15px;
+//   font: 500 14px/10px "nutanix_soft", san-serif;
+//   color: #22272E;
+//   text-decoration: none;
+//   margin: 0;
+//   outline: none;
+// }
+//
+// input[type=reset]:hover, [data-type='secondary']:hover {
+//   color: #22A5F7;
+//   cursor: pointer;
+// }
+//
+// input[type=reset]:active, [data-type='secondary']:active {
+//   color: #91d2fb;
+// }
